@@ -12,10 +12,13 @@ public class Main {
 		try {
 			String Min = bf.readLine();	
 			StringTokenizer st = new StringTokenizer(Min, " ");
-			int A = Integer.parseInt(st.nextToken());
+			int  A = Integer.parseInt(st.nextToken());
 			int B = Integer.parseInt(st.nextToken());
-			bs.write(String.valueOf(A-B));
-			bs.flush();
+			bs.write(String.valueOf(A+B)+"\n");
+			bs.write(String.valueOf(A-B)+"\n");
+			bs.write(String.valueOf(A*B)+"\n");
+			bs.write(String.valueOf(A/B)+"\n");
+			bs.write(String.valueOf(A%B)+"\n");
 			bs.close();
 			bf.close();
 		}
