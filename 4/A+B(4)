@@ -1,0 +1,26 @@
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class Main{
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb =new StringBuilder();
+		int A,B;
+		String[] sn;
+		String str=null;
+		try {
+			while((str= br.readLine()) != null) {
+				sn=str.split(" ");
+				A=Integer.parseInt(sn[0]);
+				B=Integer.parseInt(sn[1]);
+				sb.append(A+B+"\n");
+			}
+			System.out.println(sb);
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
