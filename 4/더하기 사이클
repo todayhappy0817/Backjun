@@ -1,0 +1,30 @@
+package Test;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class Main{
+	public static void main(String[] args) {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb =new StringBuilder();
+		int num;
+		int answer=0;
+		int count=0;
+		try {
+			num= Integer.parseInt(bf.readLine()); //입력한 값
+			answer=num;
+			do {
+				answer = (answer%10*10)+(answer/10 + answer%10)%10;
+				count++;					
+			}while(num != answer);
+			sb.append(count);
+			System.out.println(sb);
+			bf.close();
+			
+		}
+		catch(IOException e) {
+			
+		}
+	}
+}
